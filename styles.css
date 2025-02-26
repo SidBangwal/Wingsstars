@@ -1,0 +1,451 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white
+}
+/* Header Styles */
+header {
+
+    color: #fff;
+ 
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 120px;
+    transition: transform 1.5s ease;
+}
+.logo:hover img {
+    transform: rotateY(180deg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+nav ul li a {
+    color: #080808;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: larger;
+    
+}
+
+nav ul li a:hover {
+    color: #b80f23;
+}
+
+/* Hero Section */
+#home {
+    color: #f9f7f7;
+    text-align: center;
+    padding: 100px 20px;
+}
+.main1{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 85px;
+}
+.right1{
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-top: 90px;
+    font-family: sans-serif;
+    padding: 5px;
+}
+.right1 h1{
+    font-size: 3.1rem;
+    
+}
+.right1 p{
+    font-size: 1.9rem;
+    margin-bottom: 20px;
+   
+    
+}
+.right1 button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid #0e0e0e;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.9rem;
+    font-weight: bolder;
+    
+}
+.right1 button:hover {
+    background: rgb(7, 7, 7);
+    color: white;
+    transition: ease-in 0.6s;
+}
+
+/* Container ----------------------------------------------------------------*/
+.containerh{
+    text-align: center;
+    font-size: 2.5rem;
+    
+    font-family: cursive;
+    position: relative;
+    margin-top: 50px;
+    text-shadow: 2px 1px 2px #333;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: black;
+    padding: 15px 0;
+}
+
+/* The moving text */
+.marquee-text {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-family: cursive;
+    animation: marquee 20s linear infinite;
+}
+
+/* Keyframes for smooth scrolling */
+@keyframes marquee {
+    from {
+        transform: translateX(80%);
+    }
+    to {
+        transform: translateX(-80%);
+    }
+}
+
+/* GRAPH PART -------------------------------------------------------------*/
+
+.graph {
+    display: flex;
+    justify-content: space-between; /* Ensures equal spacing */
+    align-items: center; /* Aligns items vertically */
+    text-align: center;
+    width: 100%; /* Full width */
+    gap: 50px;
+    position: relative;
+    margin-top: 85px;
+}
+
+.graph2, .graph1 {
+    flex: 1; /* Makes both sections take equal width */
+}
+
+.graph2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the button & text */
+}
+
+.graph2 button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.graph2 button:hover {
+    background: rgb(7, 7, 7);
+    color: white;
+    transition: ease-in 0.6s;
+}
+.graph2 p {
+    font-size: 1.6rem;
+    margin-top: 10px;
+}
+
+.graph1 img {
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
+/* About Us Section--------------------------------------------------------------------------------------- */
+.services {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    margin-top: 85px;
+}
+
+.services h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+hr {
+    width: 80%;
+    border: 2px solid white;
+    margin: 10px auto 30px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    max-width: 1100px;
+    margin: auto;
+    gap: 20px;
+}
+
+.service-box {
+    background: rgba(95, 91, 91, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.7s ease, box-shadow 0.5s ease;     
+    box-shadow: 2px 2px 18px rgb(202, 13, 130);
+}
+.service-box:hover {
+    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
+    box-shadow: 0 10px 20px rgba(211, 151, 150, 0.3);
+}
+.emoji {
+    font-size: 37px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.service-box h3 {
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+}
+
+.service-box p {
+    font-size: 16px;
+    color: #d3d3d3;
+    font-family: sans-serif;
+}
+
+
+
+
+/* Contact Section------------------------------------------------------ */
+
+.contact-form {
+    padding: 50px 20px;
+    max-width: 600px;
+    margin: auto;
+    background-color: rgb(166, 166, 166);
+}
+
+
+.contact-form h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.email-us {
+    font-style: italic;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.email-us span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+form {
+   
+    padding: 0;
+    text-align: center;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.form-group input,
+select {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group {
+    text-align: left;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.highlight {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.send-button {
+    background: white;
+    border: 2px solid black;
+    font-size: 18px;
+    padding: 10px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.send-button:hover {
+    background: black;
+    color: white;
+}
+
+
+/* Footer Styles------------------------------------------- */
+.footer-bottom{
+    text-align: center;
+    font-size: 1.1rem;
+    
+    background: black;
+    color: white;
+}
+.footer-logo{
+    text-align: center;
+        background: black;
+        color: white;
+        font-size: 1.2rem;
+        padding: 5px;
+}
+.footer-logo img{
+    height: 80px;
+    width: 100px;
+    
+    filter: invert(1);
+}
+
+
+
+/* Responsive Design------------------------------------------------------------ */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .service-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px){
+    .main1{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right1{
+        margin-top: 20px;
+    }
+    .right1 h1{
+        font-size: 0.8rem;
+    }
+    .right1 p{
+        font-size: 0.7rem;
+    }
+    .right1 button{
+        font-size: 0.7rem;
+    }
+    .container1 ul{
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+    .graph {
+        flex-direction: column;
+        align-items: center;
+    }
+    .graph2, .graph1 {
+        flex: 1;
+    }
+    .graph2 button {
+        font-size: 0.4rem;
+    }
+    .graph2 p {
+        font-size: 0.5rem;
+    }
+    .graph1 img {
+        max-width: 100%;
+        height: auto;
+    }
+    .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-box {
+        width: 100%;
+    }
+    .contact-form {
+        max-width: 100%;
+    }
+    .footer-logo img{
+        height: 60px;
+        width: 80px;
+    }
+    .footer-logo{
+        font-size: 1rem;
+    }
+    .footer-bottom{
+        font-size: 1rem;
+    }
+}
