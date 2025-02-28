@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+</head>
+<body>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <style>
+
+            * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                background: linear-gradient(135deg, #6a11cb, #c01171); 
+                color: white;
+                font-family: 'Montserrat', sans-serif;
+            }
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.service-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 10px 15px 11px #181818;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.service-card h2 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+}
+.service-card p {
+    font-size: 16px;
+    color: black;
+}
+.service-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 15px;
+}
+.service-card button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #020254;
+    color: white;
+    font-size: 17px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+      .heading-container {
+                text-align: center;
+                position: relative;
+                padding: 20px;
+                margin-bottom: 35px;
+                animation: fadeIn 1.2s ease-in-out;
+            }
+    
+            .heading-container h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+                letter-spacing: 2px;
+                display: inline-block;
+                position: relative;
+                padding-bottom: 10px;
+            }
+    
+            /* Adding an underline effect */
+            .heading-container h1::after {
+                content: "";
+                display: block;
+                width: 50%;
+                height: 4px;
+                background: #0c0c0c;
+                margin: 10px auto 0;
+                border-radius: 10px;
+                transition: width 0.3s ease-in-out;
+            }
+    
+            /* Hover effect */
+            .heading-container h1:hover::after {
+                width: 100%;
+            }
+    
+            /* Fade-in animation */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            h3{
+                text-align: center;
+    margin-top: 55px;
+    margin-bottom: 28px;
+    font-size: 1.9rem;
+    filter: drop-shadow(2px 8px 6px black);
+    
+            }
+            section p{
+                text-align: center;
+                filter: drop-shadow(2px 4px 6px black);
+                font-size: 1.2rem;
+                font-family: system-ui;
+                padding: 8px;
+            }
+    
+        </style>
+    </head>
+    <body>
+    
+        <div class="heading-container">
+            <h1>🚀 WingsStars offers the following services ✨</h1>
+        </div>
+    <div class="services-container">
+        <!-- Digital Marketing Card -->
+        <div class="service-card">
+            <img src="seowings.jpg" alt="Digital Marketing">
+            <h2>Search engine optimization</h2>
+            <p>We provide top-notch services to help your business grow online.</p>
+            <button>Let's started</button>
+        </div>
+
+        <!-- Website Development Card -->
+        <div class="service-card">
+            <img src="websitewings.webp"Website Development">
+            <h2>Website Development</h2>
+            <p>We design and develop responsive, user-friendly websites tailored to your needs.</p>
+            <button>Let's started</button>
+        </div>
+
+        <!-- Influencer Marketing Card -->
+        <div class="service-card">
+            <img src="influncer.jpg" alt="Influencer Marketing">
+            <h2>Influencer Marketing</h2>
+            <p>We connect you with the right influencers to boost your brand's visibility.</p>
+            <button>Let's started</button>
+        </div>
+    </div>
+    <section>
+        <h3>Why do you need our services?</h3>
+        <p>You need SEO to improve your website's visibility on search engines, driving organic traffic. Website development ensures your site is functional, user-friendly, and aligns with your brand. Influencer marketing helps you reach a wider, targeted audience through trusted personalities, boosting credibility and engagement. Together, these services enhance online presence, attract customers, and grow your business.</p>
+    </section>
+</body>
+</html>
