@@ -874,7 +874,12 @@ footer p{
     }
 
     .nav-links {
-      display: none;
+      display: flex;
+      margin-right: 55px;
+    gap: 0.7rem;
+    }
+    .nav-links a{
+      font-size: 1.1rem;
     }
 
     .main1 {
@@ -890,6 +895,12 @@ footer p{
     }
 .services{
   margin-left: 30px;
+}
+.containerh{
+  font-size: 1.7rem;
+}
+.marquee-text{
+  font-size: 1.2rem;
 }
 
     .services-container {
