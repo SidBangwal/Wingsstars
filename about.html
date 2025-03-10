@@ -1,209 +1,689 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - WingsStars</title>
-  <style>
-    /* General Styles */
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f9;
-      color: black;
-      line-height: 1.6;
-    }
-
-    h1, h2, h3 {
-      color: black;
-    }
-
-    a {
-      text-decoration: none;
-      color: black;
-    }
-
-    a:hover {
-      color: #2980b9;
-    }
-
-    /* Container */
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Header */
-    .header {
-      text-align: center;
-      padding: 60px 0;
-      background: linear-gradient(135deg, #3498db, #8e44ad);
-      color: white;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-      animation: slideIn 1.5s ease-in-out;
-    }
-
-    .header p {
-      font-size: 1.2rem;
-      animation: slideIn 2s ease-in-out;
-    }
-
-    /* Sections */
-    .section {
-      margin: 40px 0;
-      padding: 20px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .section:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: black;
-    }
-
-    .section p {
-      font-size: 1.1rem;
-      color: black;
-    }
-
-    /* Values List */
-    .values-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .values-list li {
-      background: #ecf0f1;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 5px;
-      transition: background 0.3s ease;
-    }
-
-    .values-list li:hover {
-      background: #3498db;
-      color: white;
-    }
-
-    /* Call to Action */
-    .cta {
-      text-align: center;
-      margin: 60px 0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 15px 30px;
-      background: #3498db;
-      color: white;
-      border-radius: 5px;
-      font-size: 1.2rem;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background: #2980b9;
-      transform: scale(1.05);
-    }
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 20px;
-      background: #2c3e50;
-      color: white;
-      margin-top: 40px;
-    }
-
-    .footer a {
-      color: #3498db;
-    }
-
-    .footer a:hover {
-      color: #2980b9;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes slideIn {
-      from { transform: translateY(-20px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-  <!-- Header -->
-  <div class="header">
-    <h1>About WingsStars</h1>
-    <p>Empowering Your Dreams, One Step at a Time</p>
+    <style>
+        /* General Reset */
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  :root {
+    --primary: #4a6bff;
+    --secondary: #ff6b4a;
+    --dark: #333333;
+    --light: #f9f9f9;
+    --transition: all 0.3s ease;
+  }
+  :root {
+    --dark-bg: #0a0a0a;
+    --purple-primary: #6a0dad;
+    --purple-secondary: #9932cc;
+    --pink-accent: #ff1493;
+    --pink-light: #ff69b4;
+    --text-light: #ffffff;
+    --text-dark: #222222;
+    --gradient-bg: linear-gradient(135deg, #69676a, #070707);
+}
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--light);
+    color: black;
+    overflow-x: hidden;
+  }
+  
+  /* Header and Navigation */
+ 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%; 
+  width: 100%;
+  transition: all 0.4s ease;
+  background: white;
+  backdrop-filter: blur(10px);
+}
+.logo {
+  height: 160px;
+
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.5s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(6, 32, 127);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(11, 9, 148);
+  transform: translateY(-3px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.cta-button {
+  background: rgb(5, 5, 118);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: rgb(11, 9, 148)
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background:rgba(255, 255, 255, 0.1);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.cta-button:hover::before {
+  width: 100%;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: rgb(11, 9, 148)
+}
+    /* Hero Section -------------------------------------------*/
+    .hero {
+    height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        margin-top: 50px;
+        position: relative;
+    }
+
+
+    .hero-content {
+        max-width: 800px;
+        padding: 0 20px;
+        z-index: 1;
+      
+    }
+
+    .hero h1 {
+        font-size: 3.2rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: var(--dark);
+        background: linear-gradient(to right, var(--dark), var(--primary));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeIn 6s ease;
+    }
+
+    .hero p {
+        font-size: 2.0rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+        color: black;
+        animation: fadeIn 6s ease;
+    }
+   /* About Sections ----------------------------------*/
+   .about-section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--dark);
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 6s ease;
+}
+
+
+
+.section-title p {
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: black;
+    animation: fadeIn 6s ease;
+}
+
+.about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.about-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    z-index: 2;
+}
+
+.about-card-content {
+    padding: 30px;
+}
+
+.about-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--primary-color);
+}
+
+.about-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+ /* Features Section ------------------------------------*/
+ .features-section {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.features-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+   
+}
+
+.features-section::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  
+}
+
+.features-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-box {
+    flex: 1;
+    min-width: 220px;
+    max-width: 260px;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.feature-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    z-index: -1;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-box:hover::before {
+    opacity: 0.05;
+}
+
+.feature-box:hover .feature-icon {
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    color: black;
+    transform: rotateY(360deg);
+}
+
+
+
+.feature-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: rgba(207, 16, 124, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.feature-box h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--dark);
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 6s ease;
+}
+
+.feature-box p {
+    color: black;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+   /* Stats Section */
+
+   .counter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+  }
+  
+  .counter-item {
+    text-align: center;
+  }
+  
+  .counter {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .counter-text {
+    display: block;
+    font-size: 18px;
+    color: #777;
+    margin-top: 10px;
+  }
+  .statsh1{
+text-align: center;
+margin-top: 50px;
+margin-bottom: 30px;
+font-size: 2.7rem;
+font-weight: 600;
+color: var(--dark);
+background: linear-gradient(to right, var(--dark), var(--primary));
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+animation: fadeIn 6s ease;
+  }
+  .statsp{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: black;
+    animation: fadeIn 6s ease;
+      }
+      /* Footer ---------------------------------------*/
+footer {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin-top: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #34495e;
+  }
+  
+  /* Footer Left Section */
+  .footer-left {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 110px;
+  }
+  
+  .footer-left img {
+    margin-bottom: 17px;
+    margin-left: 215px;
+    margin-top: 10px;
+    filter: invert(1);
+  }
+  
+  .footer-left p {
+    font-size: 15px;
+    line-height: 1.1;
+    color: white;
+  }
+  
+  /* Footer Right Section */
+  .footer-right {
+    flex: 1;
+    min-width: 200px;
+    margin-top: 56px;
+    margin-left: 55px;
+  }
+  
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-right ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ecf0f1;
+  }
+  
+  .footer-right ul li:hover {
+    color: #0d28a1;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 704px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        margin-left: 30px;
+        gap: 20px;
+    }
+  }
+  
+  footer p{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+    </style>
+        <!-- Header Section -->
+        <header>
+            <nav class="navbar">
+                <img src="WingsStars.png" alt="Logo" class="logo">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="services.html">Services</a>
+                    <a href="Blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <button class="cta-button">Get Started</button>
+            </nav>
+        </header>
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+        <h1>About WingsStars</h1>
+        <p>Empowering Your Dreams, One Step at a Time</p>
+    </div>
+</section>
+    <!-- About Section ------------------------>
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+                <p>Learn more about who we are, what we believe in, and how we can help you achieve your goals.</p>
+            </div>
+
+            <div class="about-cards">
+                <div class="about-card fade-in-up">
+                    <div class="about-card-content">
+                        <h3>Who We Are</h3>
+                        <p>WingsStars is a dynamic and forward-thinking company dedicated to helping our clients achieve their goals. With a team of experienced professionals, we combine expertise, creativity, and cutting-edge technology to deliver results that exceed expectations.</p>
+                    </div>
+                </div>
+
+                <div class="about-card fade-in-up" data-delay="200">
+                    <div class="about-card-content">
+                        <h3>Our Vision</h3>
+                        <p>We envision a world where every idea has the potential to soar. By fostering innovation and embracing challenges, we aim to be a trusted partner for those who dare to dream big. Our commitment is to transform visions into tangible success stories.</p>
+                    </div>
+                </div>
+
+                <div class="about-card fade-in-up" data-delay="400">
+                    <div class="about-card-content">
+                        <h3>What We Do</h3>
+                        <p>At WingsStars, we specialize in digital marketing and search engine optimization. Our services are designed to meet the unique needs of our clients, ensuring they stay ahead in a competitive landscape through tailored strategies and innovative solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Features Section ------------------------------------------>
+      <section class="features-section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Core Features</h2>
+                <p>We offer comprehensive digital marketing solutions designed to elevate your brand and drive measurable results.</p>
+            </div>
+
+            <div class="features-container">
+                <div class="feature-box fade-in" data-delay="0">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Increase in Traffic and high ROI</h3>
+                    <p>Drive more qualified visitors to your website and maximize your return on investment.</p>
+                </div>
+
+                <div class="feature-box fade-in" data-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Industry Range and Expertise</h3>
+                    <p>Benefit from our diverse experience across multiple industries and market segments.</p>
+                </div>
+
+                <div class="feature-box fade-in" data-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Strategic SEO/SEM Consulting</h3>
+                    <p>Get expert guidance on search engine optimization and marketing strategies.</p>
+                </div>
+
+                <div class="feature-box fade-in" data-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Guaranteed Search Rankings</h3>
+                    <p>We commit to improving your search engine visibility with measurable results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Stats Section ----------------------------------------------------->
+ <h1 class="statsh1">Our Achievements</h1>
+ <p class="statsp">Numbers that speak volumes about our commitment to excellence and client success.</p>
+ <div class="counter-container">
+    <div class="counter-item">
+      <span class="counter" data-target="55">55</span>
+      <span class="counter-text">Projects Completed</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter" data-target="95">95%</span><span>%</span>
+      <span class="counter-text">Success Rate</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter" data-target="55">55</span><span>+</span>
+      <span class="counter-text">Satisfied Clients</span>
+    </div>
+    <div class="counter-item">
+      <span class="counter" data-target="90">90%</span><span>%</span>
+      <span class="counter-text">ROI Increase</span>
+    </div>
   </div>
+    <!-- Footer -------------------------------------------->
+    <footer>
+        <div class="footer">
+          <div class="footer-left">
+            <img src="WingsStars.png" width="100" height="100" alt="">
+            <p>Wings and Stars is a digital marketing agency that specializes in web development, social media optimization, UI/UX design, search engine optimization, and influencer marketing.
+            </p>
+          </div>
+          <div class="footer-right">
+           <ul>
+            <li>Website Development</li>
+            <li>Search Engine Optimization</li>
+            <li>Social Media Optimization</li>
+            <li>Content Marketing</li>
+           </ul>
+          </div>
+        </div>
+        <p><p>&copy; 2025 WIngsstars. All Rights Reserved.</p></p>
+      </footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
 
-  <!-- Container -->
-  <div class="container">
-    <!-- Who We Are -->
-    <div class="section">
-      <h2>Who We Are</h2>
-      <p>WingsStars is a dynamic and forward-thinking company dedicated to helping our clients achieve their goals. With a team of experienced professionals, we combine expertise, creativity, and cutting-edge technology to deliver results that exceed expectations.</p>
-    </div>
+  const startCounter = (counter) => {
+    const target = +counter.getAttribute("data-target");
+    const duration = 2000; // Animation duration in milliseconds
+    const increment = target / (duration / 16); // 16ms per frame for smooth animation
 
-    <!-- Our Vision -->
-    <div class="section">
-      <h2>Our Vision</h2>
-      <p>We envision a world where every idea has the potential to soar. By fostering innovation and embracing challenges, we aim to be a trusted partner for those who dare to dream big.</p>
-    </div>
+    let current = 0;
 
-    <!-- What We Do -->
-    <div class="section">
-      <h2>What We Do</h2>
-      <p>At WingsStars, we specialize in [insert your industry or services]. Our services are designed to meet the unique needs of our clients, ensuring they stay ahead in a competitive landscape.</p>
-    </div>
+    const updateCounter = () => {
+      current += increment;
+      if (current < target) {
+        counter.textContent = Math.ceil(current);
+        requestAnimationFrame(updateCounter);
+      } else {
+        counter.textContent = target;
+      }
+    };
 
-    <!-- Our Values -->
-    <div class="section">
-      <h2>Our Values</h2>
-      <ul class="values-list">
-        <li>Excellence: We strive for the highest standards in all aspects of our work.</li>
-        <li>Innovation: We embrace creativity and technology to drive progress.</li>
-        <li>Integrity: We believe in transparency, honesty, and ethical practices.</li>
-        <li>Collaboration: We work closely with our clients to achieve shared success.</li>
-        <li>Passion: We are driven by a genuine love for what we do.</li>
-      </ul>
-    </div>
+    updateCounter();
+  };
 
-    <!-- Why Choose Us -->
-    <div class="section">
-      <h2>Why Choose WingsStars?</h2>
-      <p>Tailored solutions to meet your unique needs. A team of dedicated professionals with diverse expertise. A commitment to delivering results on time and within budget. A customer-centric approach that puts you first.</p>
-    </div>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 } // Trigger when 50% of the element is visible
+  );
 
-    <!-- Call to Action -->
-    <div class="cta">
-      <a href="#" class="cta-button">Contact Us Today</a>
-    </div>
-  </div>
+  counters.forEach((counter) => {
+    observer.observe(counter);
+  });
+});
 
-  <!-- Footer -->
-  <div class="footer">
-    <p>&copy; 2025 WingsStars. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-  </div>
+</script>
 </body>
 </html>

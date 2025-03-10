@@ -3,166 +3,849 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services Page</title>
-</head>
-<body>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-        <style>
-
-            * {
+    <title>Our Services | WingsStars</title>
+    <!-- Font Awesome (for icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Base Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
+:root {
+    --primary: #4a6bff;
+    --secondary: #ff6b4a;
+    --dark: #333333;
+    --light: #f9f9f9;
+    --transition: all 0.3s ease;
+  }
+
 body {
-                margin: 0;
-                padding: 0;
-                height: 100vh;
-                background: linear-gradient(135deg, #6a11cb, #c01171); 
-                color: white;
-                font-family: 'Montserrat', sans-serif;
-            }
-.services-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+    background-color: #f8f9fe;
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
 }
+
+/* Decorative Background Elements */
+.bg-element {
+    position: absolute;
+    background-color: rgba(79, 94, 162, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.bg-element-1 {
+    width: 200px;
+    height: 200px;
+    top: 20%;
+    left: 5%;
+}
+
+.bg-element-2 {
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    right: 10%;
+}
+
+.bg-element-3 {
+    width: 100px;
+    height: 100px;
+    bottom: 15%;
+    left: 15%;
+}
+
+.bg-element-4 {
+    width: 120px;
+    height: 120px;
+    top: 10%;
+    right: 20%;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover, 
+nav ul li a.active {
+    color: #4f5ea2;
+}
+
+.cta-button {
+    background-color: #0d1e7a;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #3949ab;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 30, 122, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    padding: 80px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fe 0%, #eaecf7 100%);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #4f5ea2;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero-image {
+    width: 45%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Services Section */
+.services-section {
+    padding: 80px 8%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    color: var(--dark);
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 6s ease;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-heading h2:after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background-color: #4f5ea2;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-heading p {
+    font-size: 18px;
+    color: black;
+    margin-top: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
 .service-card {
     background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 5px 10px 15px 11px #181818;
-    width: 350px;
-    padding: 20px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
 }
+
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 30px rgba(79, 94, 162, 0.2);
 }
-.service-card h2 {
-    font-size: 24px;
-    color: black;
-    margin-bottom: 10px;
+
+.service-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(79, 94, 162, 0.9) 0%, rgba(13, 30, 122, 0.9) 100%);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
 }
-.service-card p {
+
+.service-card:hover:before {
+    opacity: 1;
+}
+
+.service-card:hover .service-content h3,
+.service-card:hover .service-content p {
+    color: #fff;
+}
+
+.service-icon {
+    background-color: rgba(79, 94, 162, 0.1);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 20px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+    background-color: #fff;
+}
+
+.service-icon i {
+    font-size: 28px;
+    color: #4f5ea2;
+}
+
+.service-content {
+    padding: 0 30px 30px;
+    text-align: center;
+}
+
+.service-content h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.service-content p {
     font-size: 16px;
-    color: black;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
 }
-.service-card img {
+
+.service-content a {
+    display: inline-block;
+    color: #4f5ea2;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .service-content a {
+    color: #fff;
+}
+
+ /* Wrapper for smooth scrolling */
+ .slider-track {
+    display: flex;
+    animation: scroll 5s linear infinite;
+    margin-top: 40px;
+}
+
+/* Individual logo */
+.slide {
+    min-width: 150px;
+    margin: 0 20px;
+    margin-left: 120px;
+    
+}
+
+.slide:hover {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+/* Keyframe animation */
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateY(-80%);
+    }
+}
+
+/* Duplicating slides for smooth infinite scrolling */
+.slider-track:hover {
+    animation-play-state: paused;
+}
+
+/* Process Section */
+.process-section {
+    padding: 80px 8%;
+    background-color: #f8f9fe;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    position: relative;
+}
+
+.process-steps:before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: #4f5ea2;
+    z-index: 0;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 20%;
+}
+
+.step-number {
     width: 80px;
     height: 80px;
-    margin-bottom: 15px;
+    background-color: #fff;
+    border: 3px solid #4f5ea2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #4f5ea2;
+    position: relative;
+    transition: all 0.3s ease;
 }
-.service-card button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #020254;
-    color: white;
-    font-size: 17px;
-    border-radius: 15px;
+
+.step:hover .step-number {
+    background-color: #4f5ea2;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(79, 94, 162, 0.3);
+}
+
+.step h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.step p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.faq {
+    padding: 50px 20px;
+    background-color: #f8f9fe;
+}
+
+.faq h2 {
+    margin-top: 40px;
+    font-size: 2.2rem;
+    text-align: center;
+    color: var(--dark);
+    background: linear-gradient(to right, var(--dark), var(--primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeIn 4s ease;
+    margin-bottom: 60px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
     cursor: pointer;
-    margin-top: 10px;
+    font-size: 1.0rem;
+    font-weight: bold;
 }
-      .heading-container {
-                text-align: center;
-                position: relative;
-                padding: 20px;
-                margin-bottom: 35px;
-                animation: fadeIn 1.2s ease-in-out;
-            }
-    
-            .heading-container h1 {
-                font-size: 2.2rem;
-                font-weight: 700;
-                text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-                letter-spacing: 2px;
-                display: inline-block;
-                position: relative;
-                padding-bottom: 10px;
-            }
-    
-            /* Adding an underline effect */
-            .heading-container h1::after {
-                content: "";
-                display: block;
-                width: 50%;
-                height: 4px;
-                background: #0c0c0c;
-                margin: 10px auto 0;
-                border-radius: 10px;
-                transition: width 0.3s ease-in-out;
-            }
-    
-            /* Hover effect */
-            .heading-container h1:hover::after {
-                width: 100%;
-            }
-    
-            /* Fade-in animation */
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(-20px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-            h3{
-                text-align: center;
-    margin-top: 55px;
-    margin-bottom: 28px;
-    font-size: 1.9rem;
-    filter: drop-shadow(2px 8px 6px black);
-    
-            }
-            section p{
-                text-align: center;
-                filter: drop-shadow(2px 4px 6px black);
-                font-size: 1.2rem;
-                font-family: system-ui;
-                padding: 8px;
-            }
-    
-        </style>
-    </head>
-    <body>
-    
-        <div class="heading-container">
-            <h1>🚀 WingsStars offers the following services ✨</h1>
-        </div>
-    <div class="services-container">
-        <!-- Digital Marketing Card -->
-        <div class="service-card">
-            <img src="seowings.jpg" alt="Digital Marketing">
-            <h2>Search engine optimization</h2>
-            <p>We provide top-notch services to help your business grow online.</p>
-            <button>Let's started</button>
-        </div>
 
-        <!-- Website Development Card -->
-        <div class="service-card">
-            <img src="websitewings.webp"Website Development">
-            <h2>Website Development</h2>
-            <p>We design and develop responsive, user-friendly websites tailored to your needs.</p>
-            <button>Let's started</button>
-        </div>
+.faq-question:hover {
+    background-color: #f4f4f9;
+}
 
-        <!-- Influencer Marketing Card -->
-        <div class="service-card">
-            <img src="influncer.jpg" alt="Influencer Marketing">
-            <h2>Influencer Marketing</h2>
-            <p>We connect you with the right influencers to boost your brand's visibility.</p>
-            <button>Let's started</button>
+.faq-answer {
+    padding: 0 15px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Adjust based on content */
+}
+
+/* Footer ---------------------------------------*/
+footer {
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #34495e;
+  }
+  
+  /* Footer Left Section */
+  .footer-left {
+    flex: 1;
+    min-width: 250px;
+    margin-right: 110px;
+  }
+  
+  .footer-left img {
+    margin-bottom: 17px;
+    margin-left: 215px;
+    margin-top: 10px;
+    filter: invert(1);
+  }
+  
+  .footer-left p {
+    font-size: 15px;
+    line-height: 1.1;
+    color: white;
+  }
+  
+  /* Footer Right Section */
+  .footer-right {
+    flex: 1;
+    min-width: 200px;
+    margin-top: 56px;
+    margin-left: 55px;
+  }
+  
+  .footer-right ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-right ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ecf0f1;
+  }
+  
+  .footer-right ul li:hover {
+    color: #0d28a1;
+    cursor: pointer;
+  }
+  
+  footer p{
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+/* Animation Effects */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+    .hero, .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-content, .features-content, .features-image {
+        width: 100%;
+        max-width: 600px;
+        margin-bottom: 40px;
+    }
+    
+    .process-steps:before {
+        display: none;
+    }
+    
+    .process-steps {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 704px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        margin-left: 30px;
+        gap: 20px;
+    }
+
+    
+    .logo {
+        margin-bottom: 20px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    
+    nav ul li {
+        margin: 5px 10px;
+    }
+    
+    .hero h1 {
+        font-size: 36px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-element bg-element-1"></div>
+    <div class="bg-element bg-element-2"></div>
+    <div class="bg-element bg-element-3"></div>
+    <div class="bg-element bg-element-4"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="WingsStars.png" alt="WingsStars Logo">
         </div>
-    </div>
-    <section>
-        <h3>Why do you need our services?</h3>
-        <p>You need SEO to improve your website's visibility on search engines, driving organic traffic. Website development ensures your site is functional, user-friendly, and aligns with your brand. Influencer marketing helps you reach a wider, targeted audience through trusted personalities, boosting credibility and engagement. Together, these services enhance online presence, attract customers, and grow your business.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="cta-button">Get Started</button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Our <span>Digital Marketing</span> Solutions</h1>
+            <p>We help businesses soar above the competition with results-driven digital marketing strategies tailored to your unique goals and target audience.</p>
+            <button class="cta-button">Explore Our Services</button>
+        </div>
+        <img src="servicepage.jpg" alt="Digital Marketing Services" class="hero-image fade-in delay-200">
     </section>
-</body>
-</html>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="section-heading fade-in">
+            <h2>Comprehensive Services</h2>
+            <p>We offer a wide range of digital marketing services designed to help your business thrive in the digital landscape.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card fade-in delay-100">
+                <div class="service-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Search Engine Optimization</h3>
+                    <p>Increase your organic visibility and drive more qualified traffic to your website with our data-driven SEO strategies.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="service-card fade-in delay-200">
+                <div class="service-icon">
+                    <i class="fas fa-ad"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Pay-Per-Click Advertising</h3>
+                    <p>Maximize your ROI with targeted PPC campaigns that deliver immediate results and valuable insights.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="service-card fade-in delay-300">
+                <div class="service-icon">
+                    <i class="fas fa-share-alt"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Social Media Marketing</h3>
+                    <p>Build brand awareness, engage with your audience, and drive conversions through strategic social media campaigns.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="service-card fade-in delay-100">
+                <div class="service-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Email Marketing</h3>
+                    <p>Nurture leads and drive repeat business with personalized email campaigns that deliver the right message at the right time.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="service-card fade-in delay-200">
+                <div class="service-icon">
+                    <i class="fas fa-pen"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Content Marketing</h3>
+                    <p>Engage your audience with compelling content that establishes your authority and drives organic traffic to your website.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+            <div class="service-card fade-in delay-300">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="service-content">
+                    <h3>Analytics & Reporting</h3>
+                    <p>Gain actionable insights with comprehensive analytics and reporting that measures the success of your marketing efforts.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="section-heading fade-in">
+            <h2>Our Strategic Approach</h2>
+            <p>We follow a proven process to ensure the success of your digital marketing campaigns.</p>
+        </div>
+        <div class="process-steps">
+            <div class="step fade-in delay-100">
+                <div class="step-number">1</div>
+                <h3>Discovery</h3>
+                <p>We analyze your business, goals, target audience, and competitors to lay the foundation for success.</p>
+            </div>
+            <div class="step fade-in delay-200">
+                <div class="step-number">2</div>
+                <h3>Strategy</h3>
+                <p>We develop a customized strategy that aligns with your goals and leverages the most effective channels.</p>
+            </div>
+            <div class="step fade-in delay-300">
+                <div class="step-number">3</div>
+                <h3>Implementation</h3>
+                <p>Our team executes the strategy with precision, optimizing each campaign for maximum performance.</p>
+            </div>
+            <div class="step fade-in delay-400">
+                <div class="step-number">4</div>
+                <h3>Analysis</h3>
+                <p>We continuously monitor and analyze campaign performance to identify areas for improvement.</p>
+            </div>
+            <div class="step fade-in delay-500">
+                <div class="step-number">5</div>
+                <h3>Optimization</h3>
+                <p>Based on data-driven insights, we refine and optimize campaigns to deliver even better results.</p>
+            </div>
+        </div>
+    </section>
+
+        <!-- Duplicate for infinite effect ------------------>
+        <div class="slider">
+            <div class="slider-track">
+                <div class="slide"><img src="influencer.png" alt="Angular"></div>
+                <div class="slide"><img src="advertising.png" alt="Angular"></div>
+                <div class="slide"><img src="search-engine-optimization.png" alt="OpenUI5"></div>
+                <div class="slide"><img src="software-developer.png" alt="Rails"></div>
+                <div class="slide"><img src="blog_2593549.png" alt="Node.js"></div>
+               
+    
+                <!-- Duplicate for infinite effect -->
+               
+            </div>
+        </div>
+
+    <!-- FAQ----------------------------------------------- -->
+    
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What is included in your marketing strategy services?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Our marketing strategy services include market research, competitor analysis, target audience identification, campaign planning, and performance tracking. We tailor each strategy to meet your specific business goals.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do you approach brand development?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We start by understanding your business values, mission, and vision. Our team then works on creating a unique brand identity, including logo design, brand messaging, and visual elements that resonate with your target audience.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What types of digital advertising do you offer?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a range of digital advertising services, including pay-per-click (PPC) campaigns, social media advertising, display ads, and retargeting campaigns. Our goal is to maximize your ROI by reaching the right audience at the right time.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can you help with content creation for social media?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, our creative team specializes in creating engaging content for various social media platforms. We develop content calendars, create posts, and manage your social media presence to keep your audience engaged.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do you measure the success of a campaign?</span>
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We use a combination of analytics tools to track key performance indicators (KPIs) such as click-through rates, conversion rates, and ROI. Our detailed reports provide insights into what’s working and where improvements can be made.</p>
+                </div>
+            </div>
+        </div>
+    
+         <!-- Footer -------------------------------------------->
+    <footer>
+        <div class="footer">
+          <div class="footer-left">
+            <img src="WingsStars.png" width="100" height="100" alt="">
+            <p>Wings and Stars is a digital marketing agency that specializes in web development, social media optimization, UI/UX design, search engine optimization, and influencer marketing.
+            </p>
+          </div>
+          <div class="footer-right">
+           <ul>
+            <li>Website Development</li>
+            <li>Search Engine Optimization</li>
+            <li>Social Media Optimization</li>
+            <li>Content Marketing</li>
+           </ul>
+          </div>
+        </div>
+        <p><p>&copy; 2025 WIngsstars. All Rights Reserved.</p></p>
+      </footer>
+      <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+    </script>
+    </body>
+    </html>
